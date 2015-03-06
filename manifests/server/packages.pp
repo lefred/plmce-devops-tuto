@@ -8,7 +8,7 @@ class mysql::server::packages {
           }
           'Debian': {
               $require = Apt::Source['mysql-repo']
-              $packs   = "percona-server-server-56" 
+              $packs   = "percona-server-server-5.6" 
           }
       }
       package {
