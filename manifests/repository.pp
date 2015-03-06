@@ -14,8 +14,8 @@ class mysql::repository {
                      baseurl  => "http://repo.percona.com/centos/$releasever/os/$basearch/",
                      gpgcheck => 0;
                }
-          }
-          'Debian': {
+            }
+            'Debian': {
                include ::apt
                
                apt::source {
@@ -27,5 +27,6 @@ class mysql::repository {
                      key_source => "http://mirror.openminds.be/keys/1C4CBDCDCD2EFD2A.asc",
                      include_src => false
               }
+            }  
           } 
 } 
