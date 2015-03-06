@@ -15,7 +15,7 @@ class mysql::server::config {
         file {
                 $my_file:
                         ensure  => present,
-                        source  => "puppet:///modules/mysql/my.cnf",
+                        content => "mysql/server/my.cnf.erb",
                         notify  => Service['mysql']
         } 
 }
