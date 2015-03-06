@@ -15,7 +15,7 @@ class mysql::server::config {
         file {
                 $my_file:
                         ensure  => present,
-                        content => "mysql/server/my.cnf.erb",
+                        content => template("mysql/server/my.cnf.erb"),
                         notify  => Service['mysql']
         } 
 }
