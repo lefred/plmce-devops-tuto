@@ -1,5 +1,7 @@
 class mysql::server::config {
 
+        $mysqlserverid = $mysql::mysqlserverid
+
         case $::osfamily {
           'RedHat': {
                $my_file="/etc/my.cnf"
