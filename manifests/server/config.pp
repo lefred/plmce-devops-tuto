@@ -1,6 +1,6 @@
-class mysql::server::config {
+class plmce::server::config {
 
-        $mysqlserverid = $mysql::mysqlserverid
+        $mysqlserverid = $plmce::mysqlserverid
         info("mysqlserverid = $mysqlserverid") 
         case $::osfamily {
           'RedHat': {
@@ -15,7 +15,7 @@ class mysql::server::config {
         file {
                 $my_file:
                         ensure  => present,
-                        content => template("mysql/server/my.cnf.erb"),
+                        content => template("plmce/server/my.cnf.erb"),
                         notify  => Service['mysql']
         } 
 }

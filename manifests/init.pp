@@ -1,5 +1,5 @@
-class mysql ($mysqlserverid=undef) {
+class plmce ($mysqlserverid=undef) {
                info("We load our MySQL module")
-               include mysql::repository
+               include plmce::repository
 }       
 

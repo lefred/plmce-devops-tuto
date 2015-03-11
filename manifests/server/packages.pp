@@ -1,4 +1,4 @@
-class mysql::server::packages {
+class plmce::server::packages {
    
 
       case $::osfamily {

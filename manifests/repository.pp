@@ -1,4 +1,4 @@
-class mysql::repository {
+class plmce::repository {
         
           info("We load our MySQL repo module")
           
