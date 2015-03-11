@@ -6,7 +6,7 @@ class plmce ($mysqlserverid=undef, $mysqldistro="percona", $mysqlversion="5.6") 
       } elsif $plmce::mysqlversion == "10.1" and $plmce::mysqldistro == "mariadb" {
           info("MariaDB 10.1 is full of new features, good tests !")
           $mysql_ver="10.1"
-      } elsif $plmce::mysqlversion == "5.6" and ($plcme::myqldistro == "community" or $plmce::mysqldistro == "percona") {
+      } elsif $plmce::mysqlversion == "5.6" and ($plmce::myqldistro == "community" or $plmce::mysqldistro == "percona") {
           info("Congratulations ! You are using a stable version of MySQL ($plmce::mysqlversion)")
       } elsif $plmce::mysqlversion == "10.0" and $plmce::mysqldistro == "mariadb" {
           info("Congratulations ! You are using a stable version of MariaDB ($plmce::mysqlversion)")
