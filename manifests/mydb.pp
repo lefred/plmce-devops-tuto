@@ -1,6 +1,6 @@
-class plmce::db {
+class plmce::mydb {
 
   $mydbs = hiera('plmce::db', {})
-  create_resources('mysql::db', $mydbs)
+  create_resources('plmce::db', $mydbs)
 
 }
