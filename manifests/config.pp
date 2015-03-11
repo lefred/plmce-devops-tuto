@@ -19,7 +19,7 @@ class plmce::config {
  
  file { '/root/.my.cnf':
      ensure  => present,
-     content => template("mysql/rootmy.cnf.erb"),
+     content => template("plmce/rootmy.cnf.erb"),
      mode    => "0600",
  }
 }
