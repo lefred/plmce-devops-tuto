@@ -15,7 +15,7 @@ class plmce ($mysqlserverid=undef, $mysqldistro="percona", $mysqlversion="5.6") 
       } elsif $plmce::mysqlversion == "5.3" and $plmce::mysqldistro == "mariadb" {
           info("This is an old version of MariaDB :-(")
       } else {
-          fail("This version and this distro are not compatible !")
+          fail("This version ($plmce::mysqlversion) and this distro ($plmce::mysqldistro) are not compatible !")
       }
       include plmce::repository
       include plmce::config
