@@ -14,6 +14,8 @@ class plmce ($mysqlserverid=undef, $mysqldistro="percona", $mysqlversion="5.6") 
           info("You are conservative !")
       } elsif $plmce::mysqlversion == "5.3" and $plmce::mysqldistro == "mariadb" {
           info("This is an old version of MariaDB :-(")
+      } elsif $plmce::mysqlversion == "5.6" and $plmce::mysqldistro == "webscalesql" {
+          info("Let's go for WebScaleSQL !")
       } else {
           fail("This version ($plmce::mysqlversion) and this distro ($plmce::mysqldistro) are not compatible !")
       }
