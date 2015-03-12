@@ -14,8 +14,8 @@ class plmce::server::packages {
             $mysql_bin = "mysql"
         }
         'webscalesql': {
-            $packs = ["webscale-server", 
-                      "webscale-client"] 
+            $packs = ["webscalesql-server", 
+                      "webscalesql-client"] 
             $mysql_bin = "mysqld"
         }
         'percona': {
