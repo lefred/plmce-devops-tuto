@@ -9,9 +9,9 @@ class plmce::repository {
          
            
           if $plmce::mysqldistro == "community" {
-              info("TURISHIP1 : ${plmce::mysql_version}") 
-              $repo_descr = "MySQL $plmce::mysql_version Community Server"
-              $repo_url   = "http://repo.mysql.com/yum/mysql-${plmce::mysql_version}-community/el/$releasever/$basearch/"
+              info("TURISHIP1 : ${plmce::mysqlversion}") 
+              $repo_descr = "MySQL $plmce::mysqlversion Community Server"
+              $repo_url   = "http://repo.mysql.com/yum/mysql-${plmce::mysqlversion}-community/el/$releasever/$basearch/"
           } elsif $plmce::mysqldistro == "mariadb" {
               $repo_descr = "MariaDB ${mysql_ver}"
               if $basearch == "x86_64" {
@@ -19,7 +19,7 @@ class plmce::repository {
               } else {
                   $mariaarch = "x86"
               }
-              $repo_url   =  "http://yum.mariadb.org/${plmce::mysql_version}/centos${releasever}-${mariaarch}/"
+              $repo_url   =  "http://yum.mariadb.org/${plmce::mysqlversion}/centos${releasever}-${mariaarch}/"
           } elsif $plmce::mysqldistro == "percona" {
               $repo_descr = "Percona"
               $repo_url   = "http://repo.percona.com/centos/$releasever/os/$basearch/"
@@ -40,16 +40,16 @@ class plmce::repository {
                include ::apt
  
                if $plmce::mysql_distro == "community" {
-                 $repo_descr      = "MySQL $plmce::mysql_version Community Server"
+                 $repo_descr      = "MySQL $plmce::mysqlversion Community Server"
                  $repo_url        = "http://repo.mysql.com/apt/ubuntu/"
-                 $repo_repos      = "mysql-${plmce::mysql_version}"
+                 $repo_repos      = "mysql-${plmce::mysqlversion}"
                  $repo_release    = $lsbdistcodename
                  $repo_key        = "5072E1F5"
                  $repo_key_source = false
                } elsif $plmce::mysql_distro == "mariadb" {
                  $repo_descr      = "MariaDB ${mysql_ver}"
                  $repo_lsbdistid  = downcase($lsbdistid)
-                 $repo_url        =  "http://mariadb.cu.be//repo/${plmce::mysql_version}/${repo_lsbdistid}"
+                 $repo_url        =  "http://mariadb.cu.be//repo/${plmce::mysqlversion}/${repo_lsbdistid}"
                  $repo_repos      = "main"
                  $repo_release    = $lsbdistcodename
                  $repo_key        = "0xcbcb082a1bb943db"
