@@ -9,6 +9,7 @@ class plmce::repository {
          
            
           if $plmce::mysqldistro == "community" {
+              info("TURISHIP1 : ${plmce::mysql_version}") 
               $repo_descr = "MySQL $plmce::mysql_version Community Server"
               $repo_url   = "http://repo.mysql.com/yum/mysql-${plmce::mysql_version}-community/el/$releasever/$basearch/"
           } elsif $plmce::mysqldistro == "mariadb" {
