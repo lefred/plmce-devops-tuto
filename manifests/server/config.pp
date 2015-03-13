@@ -1,6 +1,8 @@
 class plmce::server::config {
 
         $mysqlserverid = $plmce::mysqlserverid
+        $mysqldistro = $plmce::mysqldistro
+
         info("mysqlserverid = $mysqlserverid") 
         case $::osfamily {
           'RedHat': {

@@ -7,9 +7,11 @@ innodb_log_file_size=64M
 innodb_file_per_table=1
 log_slave_updates
 
+<% if has_variable?("mysqldistro") and @mysqldistro.to_s != "mariadb" and has_variable?("mysql_ver") and @mysql_ver.to_i > 55 then %>
 #support GTID
 enforce_gtid_consistency=1
 gtid_mode=on
+<% end %>
 
 log-bin=<%= @hostname %>-bin
 <% if has_variable?("mysqlserverid") and @mysqlserverid.to_s != "undef" then %>

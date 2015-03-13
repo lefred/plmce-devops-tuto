@@ -8,14 +8,17 @@ class plmce ($mysqlserverid=undef, $mysqldistro="percona", $mysqlversion="5.6") 
           $mysql_ver="10.1"
       } elsif $plmce::mysqlversion == "5.6" and ($plmce::myqldistro == "community" or $plmce::mysqldistro == "percona") {
           info("Congratulations ! You are using a stable version of MySQL ($plmce::mysqlversion)")
+          $mysql_ver="56"
       } elsif $plmce::mysqlversion == "10.0" and $plmce::mysqldistro == "mariadb" {
           info("Congratulations ! You are using a stable version of MariaDB ($plmce::mysqlversion)")
       } elsif $plmce::mysqlversion == "5.5" {
           info("You are conservative !")
+          $mysql_ver="55"
       } elsif $plmce::mysqlversion == "5.3" and $plmce::mysqldistro == "mariadb" {
           info("This is an old version of MariaDB :-(")
       } elsif $plmce::mysqlversion == "5.6" and $plmce::mysqldistro == "webscalesql" {
           info("Let's go for WebScaleSQL !")
+          $mysql_ver="56"
       } else {
           fail("This version ($plmce::mysqlversion) and this distro ($plmce::mysqldistro) are not compatible !")
       }
