@@ -1,7 +1,8 @@
 class plmce::server::config {
 
         $mysqlserverid = $plmce::mysqlserverid
-        $mysqldistro = $plmce::mysqldistro
+        $mysqldistro   = $plmce::mysqldistro
+        $mysql_ver     = $plmce::mysql_ver
 
         info("mysqlserverid = $mysqlserverid") 
         case $::osfamily {
