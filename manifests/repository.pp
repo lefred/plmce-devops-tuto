@@ -65,8 +65,8 @@ class plmce::repository {
                  $repo_url        = "http://repo.psce.com/psce/apt/"
                  $repo_repos      = "main"
                  $repo_release    = $lsbdistcodename
-                 $repo_key        = "0xF91EE8DD2570689B"
-                 $repo_key_source = "http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xF91EE8DD2570689B"
+                 $repo_key        = "2570689B"
+                 $repo_key_source = undef
                } 
                
 
