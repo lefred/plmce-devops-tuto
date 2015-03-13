@@ -62,7 +62,7 @@ class plmce::repository {
                  $repo_key_source = "http://mirror.openminds.be/keys/1C4CBDCDCD2EFD2A.asc"
                } elsif  $plmce::mysqldistro == "webscalesql" {
                  $repo_descr      = "PSCE Repository"
-                 $repo_url        = "http://repo.psce.com/apt/"
+                 $repo_url        = "http://repo.psce.com/psce/apt/"
                  $repo_repos      = "main"
                  $repo_release    = $lsbdistcodename
                } 
