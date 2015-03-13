@@ -66,7 +66,7 @@ class plmce::repository {
                  $repo_repos      = "main"
                  $repo_release    = $lsbdistcodename
                  $repo_key        = "2570689B"
-                 $repo_key_source = false
+                 $repo_key_source = ""
                } 
                
 
