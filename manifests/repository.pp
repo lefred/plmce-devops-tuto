@@ -56,7 +56,7 @@ class plmce::repository {
                } elsif  $plmce::mysqldistro == "percona" {
                  $repo_descr      = "Percona"
                  $repo_url        = "http://repo.percona.com/apt/"
-                 $repo_repos      = "experimental"
+                 $repo_repos      = "main"
                  $repo_release    = $lsbdistcodename
                  $repo_key        = "1C4CBDCDCD2EFD2A"
                  $repo_key_source = "http://mirror.openminds.be/keys/1C4CBDCDCD2EFD2A.asc"
