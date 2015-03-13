@@ -66,7 +66,7 @@ class plmce::repository {
                  $repo_repos      = "main"
                  $repo_release    = $lsbdistcodename
                  $repo_key        = "2570689B"
-                 $repo_key_source = "http://keyserver.ubuntu.com/"
+                 $repo_key_source = "http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xF91EE8DD2570689B"
                } 
                
 
