@@ -38,14 +38,14 @@ class plmce::repository {
             'Debian': {
                include ::apt
  
-               if $plmce::mysql_distro == "community" {
+               if $plmce::mysqldistro == "community" {
                  $repo_descr      = "MySQL $plmce::mysqlversion Community Server"
                  $repo_url        = "http://repo.mysql.com/apt/ubuntu/"
                  $repo_repos      = "mysql-${plmce::mysqlversion}"
                  $repo_release    = $lsbdistcodename
                  $repo_key        = "5072E1F5"
                  $repo_key_source = false
-               } elsif $plmce::mysql_distro == "mariadb" {
+               } elsif $plmce::mysqldistro == "mariadb" {
                  $repo_descr      = "MariaDB ${mysql_ver}"
                  $repo_lsbdistid  = downcase($lsbdistid)
                  $repo_url        =  "http://mariadb.cu.be//repo/${plmce::mysqlversion}/${repo_lsbdistid}"
@@ -53,14 +53,14 @@ class plmce::repository {
                  $repo_release    = $lsbdistcodename
                  $repo_key        = "0xcbcb082a1bb943db"
                  $repo_key_source = false
-               } elsif  $plmce::mysql_distro == "percona" {
+               } elsif  $plmce::mysqldistro == "percona" {
                  $repo_descr      = "Percona"
                  $repo_url        = "http://repo.percona.com/apt/"
                  $repo_repos      = "experimental"
                  $repo_release    = $lsbdistcodename
                  $repo_key        = "1C4CBDCDCD2EFD2A"
                  $repo_key_source = "http://mirror.openminds.be/keys/1C4CBDCDCD2EFD2A.asc"
-               } elsif  $plmce::mysql_distro == "webscalesql" {
+               } elsif  $plmce::mysqldistro == "webscalesql" {
                  $repo_descr      = "PSCE Repository"
                  $repo_url        = "http://repo.psce.com/apt/"
                  $repo_repos      = "main"
