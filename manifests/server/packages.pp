@@ -25,8 +25,8 @@ class plmce::server::packages {
                             "Percona-Server-client-${plmce::mysql_ver}"]
                }
                'Debian': {
-                  $packs = ["percona-server-server-${plmce::mysql_ver}", 
-                            "percona-server-client-${plmce::mysql_ver}"]
+                  $packs = ["percona-server-server-${plmce::mysqlversion}", 
+                            "percona-server-client-${plmce::mysqlversion}"]
                }
             }
             $mysql_bin = "mysql"
