@@ -21,15 +21,14 @@ class plmce::server::packages {
         'percona': {
             case $::osfamily {
                'RedHat': {
-                  $require = Yumrepo['mysql-repo']
                   $packs = ["Percona-Server-server-${plmce::mysql_ver}", 
                             "Percona-Server-client-${plmce::mysql_ver}"]
                }
                'Debian': {
-                  $require = Apt::Source['mysql-repo']
                   $packs = ["percona-server-server-${plmce::mysql_ver}", 
                             "percona-server-client-${plmce::mysql_ver}"]
                }
+            }
             $mysql_bin = "mysql"
         }
 
