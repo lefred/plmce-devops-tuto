@@ -48,7 +48,7 @@ class plmce::repository {
                } elsif $plmce::mysqldistro == "mariadb" {
                  $repo_descr      = "MariaDB ${mysql_ver}"
                  $repo_lsbdistid  = downcase($lsbdistid)
-                 $repo_url        =  "http://mariadb.cu.be//repo/${plmce::mysqlversion}/${repo_lsbdistid}"
+                 $repo_url        = "http://mariadb.cu.be/repo/${plmce::mysqlversion}/${repo_lsbdistid}"
                  $repo_repos      = "main"
                  $repo_release    = $lsbdistcodename
                  $repo_key        = "0xcbcb082a1bb943db"
