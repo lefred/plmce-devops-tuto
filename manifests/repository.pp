@@ -37,10 +37,10 @@ class plmce::repository {
             }
             'Debian': {
                include ::apt
-               if ${plmce::mysqlversion} == "5.7" {
+               if $plmce::mysqlversion == "5.7" {
                    $repo_version = "5.7-dmr"
                } else {
-                   $repo_version = ${plmce::mysqlversion}
+                   $repo_version = $plmce::mysqlversion
                }
  
                if $plmce::mysqldistro == "community" {
