@@ -5,7 +5,7 @@ class plmce::server::packages {
             $packs = ["mysql-community-server", 
                       "mysql-community-client", 
                      ]
-            $mysql_bin = "mysqld"
+            $mysql_bin = "mysql"
         }
         'mariadb': {
             $packs = ["MariaDB-server",
