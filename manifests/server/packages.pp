@@ -4,7 +4,7 @@ class plmce::server::packages {
         'community': {
             $packs = ["mysql-community-server", 
                       "mysql-community-client", 
-                      "mysql-community-libs-compat"]
+                     ]
             $mysql_bin = "mysqld"
         }
         'mariadb': {
