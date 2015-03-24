@@ -16,7 +16,7 @@ class plmce::server::packages {
         'webscalesql': {
             $packs = ["webscalesql-server", 
                       "webscalesql-client"] 
-            $mysql_bin = "mysqld"
+            $mysql_bin = "mysql"
         }
         'percona': {
             case $::osfamily {
