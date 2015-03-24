@@ -37,11 +37,16 @@ class plmce::repository {
             }
             'Debian': {
                include ::apt
+               if ${plmce::mysqlversion} == "5.7" {
+                   $repo_version = "5.7-dmr"
+               } else {
+                   $repo_version = ${plmce::mysqlversion}
+               }
  
                if $plmce::mysqldistro == "community" {
                  $repo_descr      = "MySQL $plmce::mysqlversion Community Server"
                  $repo_url        = "http://repo.mysql.com/apt/ubuntu/"
-                 $repo_repos      = "mysql-${plmce::mysqlversion}"
+                 $repo_repos      = "mysql-${repo_version}"
                  $repo_release    = $lsbdistcodename
                  $repo_key        = "5072E1F5"
                } elsif $plmce::mysqldistro == "mariadb" {
