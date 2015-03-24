@@ -5,18 +5,15 @@ class plmce::server::packages {
             $packs = ["mysql-community-server", 
                       "mysql-community-client", 
                      ]
-            $mysql_bin = "mysql"
         }
         'mariadb': {
             $packs = ["MariaDB-server",
                       "MariaDB-client",
                      ]
-            $mysql_bin = "mysql"
         }
         'webscalesql': {
             $packs = ["webscalesql-server", 
                       "webscalesql-client"] 
-            $mysql_bin = "mysql"
         }
         'percona': {
             case $::osfamily {
@@ -29,7 +26,6 @@ class plmce::server::packages {
                             "percona-server-client-${plmce::mysqlversion}"]
                }
             }
-            $mysql_bin = "mysql"
         }
 
 
@@ -39,9 +35,11 @@ class plmce::server::packages {
       case $::osfamily {
           'RedHat': {
               $require = Yumrepo['mysql-repo']
+              $mysql_bin = "mysqld"
           }
           'Debian': {
               $require = Apt::Source['mysql-repo']
+              $mysql_bin = "mysql"
           }
       }
 
