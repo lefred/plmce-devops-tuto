@@ -44,7 +44,6 @@ class plmce::repository {
                  $repo_repos      = "mysql-${plmce::mysqlversion}"
                  $repo_release    = $lsbdistcodename
                  $repo_key        = "5072E1F5"
-                 $repo_key_source = false
                } elsif $plmce::mysqldistro == "mariadb" {
                  $repo_descr      = "MariaDB ${mysql_ver}"
                  $repo_lsbdistid  = downcase($lsbdistid)
