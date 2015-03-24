@@ -10,7 +10,7 @@ class plmce::server::packages {
         'mariadb': {
             $packs = ["MariaDB-server",
                       "MariaDB-client",
-                      "MariaDB-compat"]
+                     ]
             $mysql_bin = "mysql"
         }
         'webscalesql': {
