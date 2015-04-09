@@ -16,6 +16,7 @@ class plmce::server::config {
 			    command => "echo 0 >/selinux/enforce",
 			    unless  => "grep 0 /selinux/enforce",
                    }
+               }
           }
           'Debian': {
                $my_file="/etc/mysql/my.cnf"
