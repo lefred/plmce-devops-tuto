@@ -21,4 +21,20 @@ class plmce::server::config {
                         content => template("plmce/server/my.cnf.erb"),
                         notify  => Service['mysql']
         } 
+
+	if $mysql_ver == "57" {
+           case $::osfamily {
+               'RedHat': {
+	           file {
+		       "/etc/init.d/mysqld":
+			   ensure => present,
+                           source => "puppet:///modules/plmce/mysqld-57",
+			   mode   => 755;
+                   }
+               }
+               'Debian': {
+ 		  # nothing here yet
+               }
+           }
+        }
 }
