@@ -1,4 +1,4 @@
-class plmce ($mysqlserverid=undef, $mysqldistro="percona", $mysqlversion="5.6") {
+class plmce ($mysqlserverid=undef, $mysqldistro="percona", $mysqlversion="5.6", $ensure="installed") {
       info("We load our MySQL module")
       if $plmce::mysqlversion == "5.7" and $plmce::mysqldistro == "community" {
           info("You are brave ! It's nice to test 5.7 !")
