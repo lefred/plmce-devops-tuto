@@ -23,7 +23,7 @@ class plmce::server::packages {
                'RedHat': {
                   $packs = ["Percona-Server-server-${plmce::mysql_ver}", 
                             "Percona-Server-client-${plmce::mysql_ver}"]
-                  $mysql_bin = "mysqld"
+                  $mysql_bin = "mysql"
                }
                'Debian': {
                   $packs = ["percona-server-server-${plmce::mysqlversion}", 
