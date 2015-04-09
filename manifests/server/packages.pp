@@ -46,6 +46,6 @@ class plmce::server::packages {
       package {
          $packs:
             require => $require,
-            ensure  => "installed";
+            ensure  => $plmce::ensure;
       }
 } 
