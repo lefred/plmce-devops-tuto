@@ -9,7 +9,7 @@ class plmce::server::config {
           'RedHat': {
                $my_file="/etc/my.cnf"
                if $mysql_ver == "57" {
-		   notify "Disabling my old friend selinux for 5.7"
+		   info("Disabling my old friend selinux for 5.7")
 		   exec {
 			"disable-selinux":
 			    path    => ["/usr/bin", "/bin"],
