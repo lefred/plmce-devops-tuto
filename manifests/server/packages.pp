@@ -45,7 +45,7 @@ class plmce::server::packages {
               $require = Apt::Source['mysql-repo']
           }
       }
-
+      info("packages : ${plmce::ensure}")
       package {
          $packs:
             require => $require,
